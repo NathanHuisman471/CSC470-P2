@@ -16,20 +16,5 @@ namespace P2_Code
         {
             InitializeComponent();
         }
-
-        private void buttonSeeFish_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButtonCrappie_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
