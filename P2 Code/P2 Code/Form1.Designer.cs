@@ -103,6 +103,7 @@
             this.Controls.Add(this.groupBoxChooseFishToSee);
             this.Name = "FormMain";
             this.Text = "CSC470 - P2";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.groupBoxChooseFishToSee.ResumeLayout(false);
             this.groupBoxChooseFishToSee.PerformLayout();
             this.ResumeLayout(false);

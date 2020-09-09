@@ -13,12 +13,12 @@ namespace P2_Code
 {
     public partial class FormSeeFish : Form
     {
-        public string _SelectedFish;
+        public string _Fish;
         
         public FormSeeFish(string selectedFish)
         {
             InitializeComponent();
-            _SelectedFish = selectedFish;
+            _Fish = selectedFish;
             
 
         }
@@ -31,22 +31,44 @@ namespace P2_Code
 
         void LoadPictures()
         {
-            if (_SelectedFish == "crappie")
+            switch (_Fish)
             {
-                
-                pictureBoxFish.Image = Resources.Crappie;
-            }
-            else if(_SelectedFish == "perch")
-            {
-                
-                pictureBoxFish.Image = Resources.Perch;
-            }else if(_SelectedFish == "walleye")
-            {
-                
-                pictureBoxFish.Image = Resources.Walleye;
+                case "Crappie":
+                    pictureBoxFish.Image = Resources.Crappie;
+                    break;
+
+                case "Perch":
+                    pictureBoxFish.Image = Resources.Perch;
+                    break;
+
+                case "Walleye":
+                    pictureBoxFish.Image = Resources.Walleye;
+                    break;
+
             }
 
+            pictureBoxFish.SizeMode = PictureBoxSizeMode.StretchImage;
+
                     
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+            
+        }
+
+        private void buttonThrowItBack_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void buttonKeepIt_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

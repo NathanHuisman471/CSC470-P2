@@ -12,11 +12,13 @@ namespace P2_Code
 {
     public partial class FormMain : Form
     {
-        public string choice;
+        public string FishToSee;
         public FormMain()
         {
             InitializeComponent();
             CenterToScreen();
+
+            
         }
 
         private void buttonSeeFish_Click(object sender, EventArgs e)
@@ -25,22 +27,31 @@ namespace P2_Code
 
             if (radioButtonCrappie.Checked)
             {
-                choice = "crappie";
-                FormSeeFish formSeeFish = new FormSeeFish(choice);
-                DialogResult result = formSeeFish.ShowDialog();
+                FishToSee = "Crappie";
+                
             }else if (radioButtonPerch.Checked)
             {
-                choice = "perch";
-                FormSeeFish formSeeFish = new FormSeeFish(choice);
-                DialogResult result = formSeeFish.ShowDialog();
+                FishToSee = "Perch";
+                
             }
             else if (radioButtonWalleye.Checked)
             {
-                choice = "walleye";
-                FormSeeFish formSeeFish = new FormSeeFish(choice);
-                DialogResult result = formSeeFish.ShowDialog();
+                FishToSee = "Walleye";
+                
             }
-            
+
+            FormSeeFish Create = new FormSeeFish(FishToSee);
+            DialogResult result = Create.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Decision canceled");
+            }
+
         }
 
         private void radioButtonCrappie_CheckedChanged(object sender, EventArgs e)
@@ -54,6 +65,11 @@ namespace P2_Code
         }
 
         private void radioButtonWalleye_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
         {
 
         }

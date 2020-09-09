@@ -43,6 +43,7 @@
             this.buttonCancel.TabIndex = 0;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonThrowItBack
             // 
@@ -52,6 +53,7 @@
             this.buttonThrowItBack.TabIndex = 1;
             this.buttonThrowItBack.Text = "Throw it Back";
             this.buttonThrowItBack.UseVisualStyleBackColor = true;
+            this.buttonThrowItBack.Click += new System.EventHandler(this.buttonThrowItBack_Click);
             // 
             // buttonKeepIt
             // 
@@ -61,6 +63,7 @@
             this.buttonKeepIt.TabIndex = 2;
             this.buttonKeepIt.Text = "Keep it";
             this.buttonKeepIt.UseVisualStyleBackColor = true;
+            this.buttonKeepIt.Click += new System.EventHandler(this.buttonKeepIt_Click);
             // 
             // pictureBoxFish
             // 
