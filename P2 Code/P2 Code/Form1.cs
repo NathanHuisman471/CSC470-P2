@@ -13,6 +13,7 @@ namespace P2_Code
     public partial class FormMain : Form
     {
         public string FishToSee;
+        public static string KeepOrThrow;
         public FormMain()
         {
             InitializeComponent();
@@ -43,9 +44,13 @@ namespace P2_Code
             FormSeeFish Create = new FormSeeFish(FishToSee);
             DialogResult result = Create.ShowDialog();
 
-            if (result == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                
+                MessageBox.Show("Decision is to keep it","Decision Result");
+            }
+            else if (result == DialogResult.OK)
+            {
+                MessageBox.Show("Decision is to Throw it back", "Decision Result");
             }
             else
             {
