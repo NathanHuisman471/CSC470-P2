@@ -16,7 +16,7 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
-            }
+            } 
             base.Dispose(disposing);
         }
 
@@ -91,7 +91,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonThrowItBack;
         private System.Windows.Forms.Button buttonKeepIt;
